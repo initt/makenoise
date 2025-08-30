@@ -1,0 +1,70 @@
+/* Reset and Base Styles */
+:root {
+  font-family: 'Inter', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --background: #111113;
+  --text-primary: #e4e4e7; /* zinc-200 */
+  --text-secondary: #a1a1aa; /* zinc-400 */
+  --border-subtle: #27272a; /* zinc-800 */
+  --scrollbar-thumb: #3f3f46; /* zinc-600 */
+  --scrollbar-thumb-hover: #52525b; /* zinc-500 */
+  --logo-filter: brightness(0) invert(1); /* White logo for dark theme */
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  color: var(--text-primary);
+  overflow: hidden; /* Prevent body scroll */
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  body {
+    overflow: hidden; /* Prevent body scroll on mobile */
+  }
+  
+  #app {
+    min-height: 100vh;
+  }
+}
+
+/* Light Theme Variables */
+.light-theme {
+  --background: #ffffff;
+  --text-primary: #18181b; /* zinc-900 */
+  --text-secondary: #71717a; /* zinc-500 */
+  --border-subtle: #e4e4e7; /* zinc-200 */
+  --scrollbar-thumb: #a1a1aa; /* zinc-400 */
+  --scrollbar-thumb-hover: #71717a; /* zinc-500 */
+  --logo-filter: brightness(0); /* Black logo for light theme */
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 6px;
+  border: 3px solid var(--background);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover);
+}
